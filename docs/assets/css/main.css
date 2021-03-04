@@ -3395,11 +3395,6 @@ input:-webkit-autofill:active
 	flex-direction: column;
 	align-items: center;
 }
-@media screen and (max-width: 1000px) {
-	#profile {
-		display: none;
-	}
-}
 .image-cropper {
 	width: 15em;
 	height: 15em;
@@ -3414,3 +3409,43 @@ input:-webkit-autofill:active
 	height: 100%;
 	width: auto;
   }
+  /* Tooltip */
+.tech-skill {
+	position: relative;
+}
+  
+/* Tooltip text */
+.tech-skill .tooltip {
+	visibility: hidden;
+	text-align: center;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-size: 16pt;
+		font-weight: 300;
+		line-height: 1.75;
+  
+	/* Position the tooltip text */
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	top: 125%;
+	left: 0;
+  
+	/* Fade in tooltip */
+	opacity: 0;
+	transition: opacity 0.3s;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tech-skill:hover .tooltip {
+	visibility: visible;
+	opacity: 1;
+  }
+
+  @media screen and (max-width: 1000px) {
+	#profile {
+		display: none;
+	}
+	.tech-skill {
+		display: none;
+	}
+}
