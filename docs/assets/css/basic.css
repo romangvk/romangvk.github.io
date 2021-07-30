@@ -1,0 +1,63 @@
+@-ms-viewport {
+  width: device-width;
+}
+body {
+  -ms-overflow-style: scrollbar;
+}
+
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    min-width: 320px;
+    margin: 0;
+  }
+}
+
+html {
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: var(--background);
+  height: 100%;
+  padding-top: 5em;
+}
+
+body.is-preload *,
+body.is-preload *:before,
+body.is-preload *:after {
+  -moz-animation: none !important;
+  -webkit-animation: none !important;
+  -ms-animation: none !important;
+  animation: none !important;
+  -moz-transition: none !important;
+  -webkit-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
+}
+
+* {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 100%;
+  color: var(--text);
+}
+
+hr {
+  border: 0;
+  border-bottom: solid 1px var(--border);
+  margin: 2em 0;
+}
+
+.inner {
+  width: 100%;
+  max-width: 68em;
+  margin: 0 auto;
+  padding: 0 2.5em;
+}
