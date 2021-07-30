@@ -1,13 +1,12 @@
 :root {
-	
-	--text: #404040;
-	--alt-text: #58585880;
+  --text: #404040;
+  --alt-text: #58585880;
 
-	--action: #f2849e;
-	--alt-action: #84f2d8;
+  --action: #f2849e;
+  --alt-action: #84f2d8;
 
-	--border: #00000033;
+  --border: #00000033;
 
-	--background: #ffffff;
-	--footer: #fffaf5;
+  --background: #ffffff;
+  --footer: #fffaf5;
 }
