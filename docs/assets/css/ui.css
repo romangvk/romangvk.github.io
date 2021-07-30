@@ -1,0 +1,19 @@
+a {
+  text-decoration: none;
+  border-bottom: dotted 1px var(--alt-text);
+
+  -moz-transition: border-bottom-color 0.2s ease, color 2s ease;
+  -webkit-transition: border-bottom-color 0.2s ease, color 2s ease;
+  -ms-transition: border-bottom-color 0.2s ease, color 2s ease;
+  transition: border-bottom-color 0.2s ease, color 2s ease;
+}
+a :hover {
+  border-bottom-color: transparent;
+  color: var(--action);
+}
+
+.anchor:hover::before {
+  content: "#";
+  position: absolute;
+  transform: translate(-1em);
+}
