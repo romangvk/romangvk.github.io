@@ -1,9 +1,11 @@
 :root {
   --text: #404040;
-  --alt-text: #58585880;
+  --alt-text: #ffffff;
 
-  --action: #f2849e;
-  --alt-action: #84f2d8;
+  --action: #677db7;
+  --action-glow: #677db755;
+
+  --alt-action: #f2849e;
 
   --border: #00000033;
 

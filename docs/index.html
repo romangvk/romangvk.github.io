@@ -12,9 +12,8 @@
 	<div id="content">
 		<header id="header">
 			<div class="inner">
-				<a href="index.html">
-					<h3 class="title anchor">Roman Kasparian</h3>
-				</a>
+				<h3><a class="anchor" href="index.html">Roman Kasparian</a></h3>
+
 			</div>
 		</header>
 		<div id="main">
@@ -25,21 +24,34 @@
 					Welcome to my website.</h1>
 				</p>
 				<hr />
-				<a id="projects" href="#projects">
-					<h2 class="anchor">Projects</h2>
-				</a>
+				<h2><a id="projects" class="anchor" href="#projects">Projects</a></h2>
 				<div>
 				</div>
-				<a id="skills" href="#skills">
-					<h2 class="anchor">Skills</h2>
-				</a>
+				<hr>
+				<h2><a id="skills" class="anchor" href="#skills">Skills</a></h2>
+
+				<div>
+				</div>
+				<hr>
 			</div>
 		</div>
 		<footer id="footer">
 			<div class="inner">
-				<a id="contact" href="#contact">
-					<h2 class="anchor">Contact me</h2>
-				</a>
+				<h2><a id="contact" class="anchor" href="#contact">Contact me</a></h2>
+				<form method="post" action="https://formspree.io/f/mpzogezl">
+					<div class="full row">
+						<div class="half">
+							<input type="text" name="name" id="name" placeholder="Name" />
+						</div>
+						<div class="half">
+							<input type="email" name="_replyto" id="email" placeholder="Email" />
+						</div>
+					</div>
+					<div class="full">
+						<textarea name="message" id="message" placeholder="Message"></textarea>
+					</div>
+					<button type="submit" id="send" class="slide right">Send</button>
+				</form>
 			</div>
 		</footer>
 	</div>
