@@ -61,3 +61,29 @@ hr {
   margin: 0 auto;
   padding: 0 2.5em;
 }
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.half {
+  width: calc(50% - 0.5em);
+}
+.full {
+  width: 100%;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 17em);
+  justify-content: space-between;
+  gap: 3em;
+}
+
+.gallery > div {
+  height: 17em;
+  border-radius: 0.3em;
+  border: 1px solid var(--border);
+  box-shadow: 0.1em 0.1em 1em var(--shadow);
+}
