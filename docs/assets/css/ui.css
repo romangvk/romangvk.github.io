@@ -1,30 +1,63 @@
 a {
   text-decoration: none;
-  border-bottom: dotted 1px var(--text);
+  border-bottom: dotted 1px var(--border);
 
-  -moz-transition: border-bottom-color 0.2s ease, color 0.2s ease,
-    text-shadow 0.2s ease;
-  -webkit-transition: border-bottom-color 0.2s ease, color 0.2s ease,
-    text-shadow 0.2s ease;
-  -ms-transition: border-bottom-color 0.2s ease, color 0.2s ease,
-    text-shadow 0.2s ease;
-  transition: border-bottom-color 0.2s ease, color 0.2s ease,
-    text-shadow 0.2s ease;
+  cursor: pointer;
+
+  -moz-transition: border-color 0.2s ease, color 0.2s ease,
+    text-shadow 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  -webkit-transition: border-color 0.2s ease, color 0.2s ease,
+    text-shadow 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  -ms-transition: border-color 0.2s ease, color 0.2s ease, text-shadow 0.2s ease,
+    box-shadow 0.2s ease, filter 0.2s ease;
+  transition: border-color 0.2s ease, color 0.2s ease, text-shadow 0.2s ease,
+    box-shadow 0.2s ease, filter 0.2s ease;
 }
+a:focus,
 a:hover {
   border-bottom-color: transparent;
   color: var(--action);
   text-shadow: 0 0 1em var(--action-glow);
 }
 
-.anchor {
+a.anchor {
   border: none;
 }
 
-.anchor:hover::before {
+a.anchor:focus::before,
+a.anchor:hover::before {
   content: "#";
   position: absolute;
   transform: translate(-1em);
+  overflow: hidden;
+  -webkit-animation: slide-in 0.1s ease-out;
+  -moz-animation: slide-in 0.1s ease-out;
+  animation: slide-in 0.1s ease-out;
+}
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translate(0em);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-1em);
+  }
+}
+
+a.icon {
+  width: 2.65em;
+  height: 2.65em;
+  line-height: 2.65em;
+  padding: 0.75em;
+  border: 1px solid var(--border);
+  border-radius: 0.4em;
+}
+a.icon:hover {
+  box-shadow: 0 0 1em var(--action-glow);
+}
+a.icon:active {
+  filter: saturate(4);
 }
 
 input[type="text"],
@@ -73,17 +106,6 @@ form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%;
-}
-form > .row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.half {
-  width: calc(50% - 0.5em);
-}
-.full {
   width: 100%;
 }
 
