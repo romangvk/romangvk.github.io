@@ -1,0 +1,144 @@
+button {
+  background: none;
+
+  margin: 0;
+  padding: 0.75em;
+
+  color: var(--action);
+  font-weight: 900;
+  font-size: 1em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+
+  display: inline-block;
+
+  outline: none;
+
+  border: 0.15em solid var(--action);
+  border-radius: 0.4em;
+
+  cursor: pointer;
+
+  -moz-transition: background-color 0.2s ease, background-position 0.2s ease,
+    color 0.2s ease-out, box-shadow 0.2s ease, border-radius 0.2s ease;
+  -webkit-transition: background-color 0.2s ease, background-position 0.2s ease,
+    color 0.2s ease-out, box-shadow 0.2s ease, border-radius 0.2s ease;
+  -ms-transition: background-color 0.2s ease, background-position 0.2s ease,
+    color 0.2s ease-out, box-shadow 0.2s ease, border-radius 0.2s ease;
+  transition: background-color 0.2s ease, background-position 0.2s ease,
+    color 0.2s ease-out, box-shadow 0.2s ease, border-radius 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--action);
+  color: var(--alt-text);
+  box-shadow: 0 0 1em var(--action-glow);
+}
+
+button:active {
+  border-radius: 0.2em;
+}
+
+button.slide {
+  background-size: 200% 200%;
+}
+
+button.slide:hover {
+  background-color: transparent;
+}
+
+button.bottom-right {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--action) 49.5%,
+    transparent 50%
+  );
+  background-position: bottom right;
+}
+
+button.bottom-right:hover {
+  background-position: top left;
+}
+
+button.bottom-left {
+  background-image: linear-gradient(
+    to bottom left,
+    var(--action) 49.5%,
+    transparent 50%
+  );
+  background-position: bottom left;
+}
+
+button.bottom-left:hover {
+  background-position: top right;
+}
+
+button.top-right {
+  background-image: linear-gradient(
+    to top right,
+    var(--action) 49.5%,
+    transparent 50%
+  );
+  background-position: top right;
+}
+
+button.top-right:hover {
+  background-position: bottom left;
+}
+
+button.top-left {
+  background-image: linear-gradient(
+    to top left,
+    var(--action) 49.5%,
+    transparent 50%
+  );
+  background-position: top left;
+}
+
+button.top-left:hover {
+  background-position: bottom right;
+}
+
+button.top {
+  background-image: linear-gradient(to top, var(--action) 50%, transparent 0);
+  background-position: top;
+}
+
+button.top:hover {
+  background-position: bottom;
+}
+
+button.bottom {
+  background-image: linear-gradient(
+    to bottom,
+    var(--action) 50%,
+    transparent 0
+  );
+  background-position: bottom;
+}
+
+button.bottom:hover {
+  background-position: top;
+}
+
+button.left {
+  background-image: linear-gradient(to left, var(--action) 50%, transparent 0);
+  background-position: left;
+}
+
+button.left:hover {
+  background-position: right;
+}
+
+button.right {
+  background-image: linear-gradient(to right, var(--action) 50%, transparent 0);
+  background-position: right;
+}
+
+button.right:hover {
+  background-position: left;
+}
+#send {
+  margin-top: 2em;
+}
