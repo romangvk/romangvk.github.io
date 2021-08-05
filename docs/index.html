@@ -9,6 +9,7 @@
 	<script src="https://kit.fontawesome.com/0504585766.js" crossorigin="anonymous"></script>
 	<script>
 		function setTheme() {
+			console.log(localStorage.darkmode);
 			if (localStorage.getItem(darkmode)) {
 				document.documentElement.classList.toggle("light-theme");
 				document.documentElement.classList.toggle("dark-theme");
@@ -17,6 +18,7 @@
 			}
 		}
 		function toggleColors() {
+			console.log(localStorage.darkmode);
 			document.documentElement.classList.toggle("light-theme");
 			document.documentElement.classList.toggle("dark-theme");
 			theme.classList.toggle("fa-cloud-moon");
