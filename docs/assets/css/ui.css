@@ -52,11 +52,13 @@ a.icon {
   padding: 0.75em;
   border: 1px solid var(--border);
   border-radius: 0.4em;
+  background-color: var(--glass);
 }
 a.icon:hover {
   box-shadow: 0 0 1em var(--action-glow);
 }
 a.icon:active {
+  border: 1px solid var(--action);
   filter: saturate(4);
 }
 

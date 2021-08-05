@@ -85,5 +85,6 @@ hr {
   height: 17em;
   border-radius: 0.3em;
   border: 1px solid var(--border);
-  box-shadow: 0.1em 0.1em 1em var(--shadow);
+  box-shadow: 0.1em 0.1em 1em var(--shadow), inset 0 0 1em #ffffff10;
+  background-color: var(--glass);
 }
