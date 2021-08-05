@@ -1,4 +1,4 @@
-:root {
+.light-theme {
   --text: #404040;
   --alt-text: #ffffff;
 
@@ -13,4 +13,23 @@
   --footer: #fffaf5;
 
   --shadow: #00000010;
+  --glass: #c3e2ff10;
+}
+
+.dark-theme {
+  --text: #ffffff;
+  --alt-text: #404040;
+
+  --action: #f2849e;
+  --action-glow: #f2849e55;
+
+  --alt: #677db7;
+
+  --border: #ffffff55;
+
+  --background: #404040;
+  --footer: #fffaf5;
+
+  --shadow: #00000033;
+  --glass: #ffffff10;
 }

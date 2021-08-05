@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="light-theme">
 
 <head>
 	<title>Roman Kasparian</title>
@@ -7,9 +7,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<script src="https://kit.fontawesome.com/0504585766.js" crossorigin="anonymous"></script>
+	<script>
+		function setTheme() {
+			if (localStorage.getItem(darkmode)) {
+				document.documentElement.classList.toggle("light-theme");
+				document.documentElement.classList.toggle("dark-theme");
+				theme.classList.toggle("fa-cloud-moon");
+				theme.classList.toggle("fa-sun");
+			}
+		}
+		function toggleColors() {
+			document.documentElement.classList.toggle("light-theme");
+			document.documentElement.classList.toggle("dark-theme");
+			theme.classList.toggle("fa-cloud-moon");
+			theme.classList.toggle("fa-cloud-sun");
+			localStorage.setItem(darkmode, !localStorage.getItem(darkmode));
+		}
+	</script>
 </head>
 
-<body>
+<body onload="setTheme()">
+	<button type="button" class="theme-toggle" onclick="toggleColors()"><em id="theme"
+			class="fas fa-fw fa-cloud-moon"></em></button>
 	<div id="content">
 		<header id="header">
 			<div class="inner">
@@ -36,9 +55,10 @@
 						<a class="icon" href="https://github.com/romangvk"><em class="fab fa-github fa-fw"></em></a>
 						<a class="icon" href="https://www.linkedin.com/in/roman-kasparian/"><em
 								class="fab fa-linkedin fa-fw"></em></a>
+						<a class="icon"><em class="fab fa-angellist fa-fw"
+								href="https://angel.co/u/roman-kasparian"></em></a>
 						<a class="icon" href="mailto:roman.kasparian@gmail.com"><em
 								class="fas fa-envelope fa-fw"></em></a>
-						<a class="icon"><em class="fas fa-file-alt fa-fw"></em></a>
 					</div>
 				</div>
 				<hr />
@@ -73,19 +93,19 @@
 			<div class="inner">
 				<h3><a id="contact" class="anchor" href="#contact">Contact me</a></h3>
 				<!-- <form method="post" action="https://formspree.io/f/mpzogezl"> -->
-				<form method="post" action=""></form>
-				<div class="full row">
-					<div class="half">
-						<input type="text" name="name" id="name" placeholder="Name" />
+				<form method="post" action="">
+					<div class="full row">
+						<div class="half">
+							<input type="text" name="name" id="name" placeholder="Name" />
+						</div>
+						<div class="half">
+							<input type="email" name="_replyto" id="email" placeholder="Email" />
+						</div>
 					</div>
-					<div class="half">
-						<input type="email" name="_replyto" id="email" placeholder="Email" />
+					<div class="full">
+						<textarea name="message" id="message" placeholder="Message"></textarea>
 					</div>
-				</div>
-				<div class="full">
-					<textarea name="message" id="message" placeholder="Message"></textarea>
-				</div>
-				<button type="submit" id="send" class="slide right">Send</button>
+					<button type="submit" class="slide right">Send</button>
 				</form>
 			</div>
 		</footer>

@@ -2,6 +2,7 @@ button {
   background: none;
 
   margin: 0;
+  margin-top: 2em;
   padding: 0.75em;
 
   color: var(--action);
@@ -139,6 +140,20 @@ button.right {
 button.right:hover {
   background-position: left;
 }
-#send {
-  margin-top: 2em;
+
+button.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  top: 1em;
+  right: 1em;
+
+  width: 2.65em;
+  height: 2.65em;
+  line-height: 2.65em;
+
+  margin: 0;
+  padding: 0.5em;
 }
