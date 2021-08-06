@@ -72,3 +72,9 @@ h6 {
 em {
   color: inherit;
 }
+
+p.credit {
+  margin:0;
+  margin-top: 3em;
+  text-align: center;
+}
