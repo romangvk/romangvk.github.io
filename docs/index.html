@@ -1,133 +1,202 @@
 <!DOCTYPE html>
 <html lang="en" class="light-theme">
+  <head>
+    <title>Roman Kasparian</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/0504585766.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function setTheme() {
+        if (localStorage.getItem("darkmode")) {
+          document.documentElement.classList.toggle("light-theme");
+          document.documentElement.classList.toggle("dark-theme");
+          theme.classList.toggle("fa-cloud-moon");
+          theme.classList.toggle("fa-cloud-sun");
+        }
+      }
+      function toggleColors() {
+        document.documentElement.classList.toggle("light-theme");
+        document.documentElement.classList.toggle("dark-theme");
+        theme.classList.toggle("fa-cloud-moon");
+        theme.classList.toggle("fa-cloud-sun");
+        localStorage.setItem("darkmode", !localStorage.getItem("darkmode"));
+      }
+    </script>
+  </head>
 
-<head>
-	<title>Roman Kasparian</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<script src="https://kit.fontawesome.com/0504585766.js" crossorigin="anonymous"></script>
-	<script>
-		function setTheme() {
-			if (localStorage.getItem("darkmode")) {
-				document.documentElement.classList.toggle("light-theme");
-				document.documentElement.classList.toggle("dark-theme");
-				theme.classList.toggle("fa-cloud-moon");
-				theme.classList.toggle("fa-cloud-sun");
-			}
-		}
-		function toggleColors() {
-			document.documentElement.classList.toggle("light-theme");
-			document.documentElement.classList.toggle("dark-theme");
-			theme.classList.toggle("fa-cloud-moon");
-			theme.classList.toggle("fa-cloud-sun");
-			localStorage.setItem("darkmode", !localStorage.getItem("darkmode"));
-		}
-	</script>
-</head>
-
-<body onload="setTheme()">
-	<button type="button" class="theme-toggle" onclick="toggleColors()"><em id="theme"
-			class="fas fa-fw fa-cloud-moon"></em></button>
-	<div id="content">
-		<header id="header">
-			<div class="inner">
-				<h3><a class="anchor" href="index.html">Roman Kasparian</a></h3>
-
-			</div>
-		</header>
-		<div id="main">
-			<div class="inner">
-				<div class="full row">
-					<h1>Hi, I'm Roman Kasparian.<br>
-						I like to write code.<br>
-						Welcome to my website.</h1>
-				</div>
-				<div class="full row">
-					<p>
-						You can reach me at <a href="tel:+15712399541">+1 (571) 239-9541</a> or <a
-							href="mailto:roman.kasparian@gmail.com">roman.kasparian@gmail.com</a>.
-						Here is my resume.
-					</p>
-					<div>
-						<a class="icon" href="https://gitlab.com/roman.kasparian"><em
-								class="fab fa-gitlab fa-fw"></em></a>
-						<a class="icon" href="https://github.com/romangvk"><em class="fab fa-github fa-fw"></em></a>
-						<a class="icon" href="https://www.linkedin.com/in/roman-kasparian/"><em
-								class="fab fa-linkedin fa-fw"></em></a>
-						<a class="icon"><em class="fab fa-angellist fa-fw"
-								href="https://angel.co/u/roman-kasparian"></em></a>
-						<a class="icon" href="mailto:roman.kasparian@gmail.com"><em
-								class="fas fa-envelope fa-fw"></em></a>
-					</div>
-				</div>
-				<hr />
-				<h3><a id="projects" class="anchor" href="#projects">Projects</a></h3>
-				<div class="gallery">
-					<div>
-						<h3 class="title">Tremelo</h3>
-						<p class="desc">A card-based list-making app for managing Agile teams made with Angular and
-							PostgreSQL.
-						</p>
-						<h4 class="links"><a>Live</a> ~ <a>Repo</a></h4>
-					</div>
-					<div>
-						<h3 class="title">WeBrowse</h3>
-						<p class="desc">A video meeting app with a shared web browser made with Socket.io, WebRTC, and
-							Redis.
-						</p>
-						<h4 class="links"><a>Live</a> ~ <a>Repo</a></h4>
-					</div>
-					<div>
-						<h3 class="title">WeWrite</h3>
-						<p class="desc">A collaborative whiteboard app made with React, Socket.io, and MongoDB.</p>
-						<h4 class="links"><a>Live</a> ~ <a>Repo</a></h4>
-					</div>
-					<div>
-						<h3 class="title">React Calculator</h3>
-						<p class="desc">A graphing calculator made with D3.js and React.</p>
-						<h4 class="links"><a>Live</a> ~ <a>Repo</a></h4>
-					</div>
-					<div>
-						<h3 class="title">Play Investor</h3>
-						<p class="desc">A stock market investment simulator using fake money and real-time data made
-							with D3.js and React.</p>
-						<h4 class="links"><a>Live</a> ~ <a>Repo</a></h4>
-					</div>
-					<div>
-						<h3 class="title">SQL Maker</h3>
-						<p class="desc">A Python library to programmatically generate SQL query strings.</p>
-						<h4 class="links"><a>Live</a> ~ <a>Repo</a></h4>
-					</div>
-				</div>
-				<hr>
-				<h3><a id="skills" class="anchor" href="#skills">Skills</a></h3>
-				<div>
-				</div>
-				<hr>
-				<h3><a id="contact" class="anchor" href="#contact">Contact me</a></h3>
-				<form method="post" action="https://formspree.io/f/mpzogezl">
-					<div class="full row">
-						<div class="half">
-							<input type="text" name="name" id="name" placeholder="Name" />
-						</div>
-						<div class="half">
-							<input type="email" name="_replyto" id="email" placeholder="Email" />
-						</div>
-					</div>
-					<div class="full">
-						<textarea name="message" id="message" placeholder="Message"></textarea>
-					</div>
-					<button type="submit" class="slide right">Send</button>
-				</form>
-			</div>
-		</div>
-		<footer id="footer">
-			<div class="inner">
-				<p class="credit">Last updated 2021 © Roman Kasparian</p>
-			</div>
-		</footer>
-	</div>
-</body>
-
+  <body onload="setTheme()">
+    <button type="button" class="theme-toggle" onclick="toggleColors()">
+      <em id="theme" class="fas fa-fw fa-cloud-moon"></em>
+    </button>
+    <div id="content">
+      <header id="header">
+        <div class="inner">
+          <h3><a class="anchor" href="index.html">Roman Kasparian</a></h3>
+        </div>
+      </header>
+      <div id="main">
+        <div class="inner">
+          <div class="full row">
+            <h1>
+              Hi, I'm Roman Kasparian.<br />
+              I like to write code.<br />
+              Welcome to my website.
+            </h1>
+          </div>
+          <div class="full row">
+            <p>
+              You can reach me at
+              <a href="tel:+15712399541">+1 (571) 239-9541</a> or
+              <a href="mailto:roman.kasparian@gmail.com"
+                >roman.kasparian@gmail.com</a
+              >. Here is my resume.
+            </p>
+            <div>
+              <a
+                class="icon"
+                href="https://gitlab.com/roman.kasparian"
+                target="_blank"
+                ><em class="fab fa-gitlab fa-fw"></em
+              ></a>
+              <a class="icon" href="https://github.com/romangvk" target="_blank"
+                ><em class="fab fa-github fa-fw"></em
+              ></a>
+              <a
+                class="icon"
+                href="https://www.linkedin.com/in/roman-kasparian/"
+                target="_blank"
+                ><em class="fab fa-linkedin fa-fw"></em
+              ></a>
+              <a
+                class="icon"
+                href="https://angel.co/u/roman-kasparian"
+                target="_blank"
+                ><em class="fab fa-angellist fa-fw"></em
+              ></a>
+              <a class="icon" href="mailto:roman.kasparian@gmail.com"
+                ><em class="fas fa-envelope fa-fw"></em
+              ></a>
+            </div>
+          </div>
+          <hr />
+          <h3><a id="projects" class="anchor" href="#projects">Projects</a></h3>
+          <div class="gallery">
+            <!-- <div>
+              <h3 class="title">Tremelo</h3>
+              <p class="desc">
+                A card-based list-making app for managing Agile teams made with
+                Angular and PostgreSQL.
+              </p>
+              <h4 class="links"><a>Live</a> ~ <a>Repo</a></h4>
+            </div>
+            <div>
+              <h3 class="title">WeBrowse</h3>
+              <p class="desc">
+                A video meeting app with a shared web browser made with
+                Socket.io, WebRTC, and Redis.
+              </p>
+              <h4 class="links"><a>Live</a> ~ <a>Repo</a></h4>
+            </div>
+            <div>
+              <h3 class="title">WeDraw</h3>
+              <p class="desc">
+                A collaborative whiteboard app made with React, Socket.io, and
+                MongoDB.
+              </p>
+              <h4 class="links"><a>Live</a> ~ <a>Repo</a></h4>
+            </div>
+            <div>
+              <h3 class="title">Play Investor</h3>
+              <p class="desc">
+                A stock market investment simulator using fake money and real
+                data made with D3.js and Vue 3.
+              </p>
+              <h4 class="links"><a>Live</a> ~ <a>Repo</a></h4>
+            </div>
+            <div>
+              <h3 class="title">SQL Maker</h3>
+              <p class="desc">
+                An object-oriented Python library to generate SQL query strings.
+              </p>
+              <h4 class="links"><a>Live</a> ~ <a>Repo</a></h4>
+            </div> -->
+            <div>
+              <h3 class="title">React Calculator</h3>
+              <p class="desc">A simple calculator app made using React.</p>
+              <h4 class="links">
+                <a
+                  href="https://romankasparian.dev/react-calculator"
+                  target="_blank"
+                  >Live</a
+                >
+                ~
+                <a
+                  href="https://github.com/romangvk/react-calculator"
+                  target="_blank"
+                  >Repo</a
+                >
+              </h4>
+            </div>
+            <div>
+              <h3 class="title">Vue.js Calculator</h3>
+              <p class="desc">A simple calculator app made using Vue.</p>
+              <h4 class="links">
+                <a
+                  href="https://romankasparian.dev/vue-calculator"
+                  target="_blank"
+                  >Live</a
+                >
+                ~
+                <a
+                  href="https://github.com/romangvk/vue-calculator"
+                  target="_blank"
+                  >Repo</a
+                >
+              </h4>
+            </div>
+          </div>
+          <hr />
+          <h3><a id="skills" class="anchor" href="#skills">Skills</a></h3>
+          <div></div>
+          <hr />
+          <h3><a id="contact" class="anchor" href="#contact">Contact me</a></h3>
+          <form method="post" action="https://formspree.io/f/mpzogezl">
+            <div class="full row">
+              <div class="half">
+                <input type="text" name="name" id="name" placeholder="Name" />
+              </div>
+              <div class="half">
+                <input
+                  type="email"
+                  name="_replyto"
+                  id="email"
+                  placeholder="Email"
+                />
+              </div>
+            </div>
+            <div class="full">
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Message"
+              ></textarea>
+            </div>
+            <button type="submit" class="slide right">Send</button>
+          </form>
+        </div>
+      </div>
+      <footer id="footer">
+        <div class="inner">
+          <p class="credit">Last updated 2021 © Roman Kasparian</p>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
