@@ -1,163 +1,255 @@
-<!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Roman Kasparian</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.10.1/devicon.min.css">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-		<link rel="manifest" href="/site.webmanifest">
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
+<!DOCTYPE html>
+<html lang="en" class="light-theme">
+  <head>
+    <title>Roman Kasparian</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <script
+      src="https://kit.fontawesome.com/0504585766.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function setTheme() {
+        if (localStorage.getItem("darkmode")) {
+          document.documentElement.classList.toggle("light-theme");
+          document.documentElement.classList.toggle("dark-theme");
+          theme.classList.toggle("fa-cloud-moon");
+          theme.classList.toggle("fa-cloud-sun");
+        }
+      }
+      function toggleColors() {
+        document.documentElement.classList.toggle("light-theme");
+        document.documentElement.classList.toggle("dark-theme");
+        theme.classList.toggle("fa-cloud-moon");
+        theme.classList.toggle("fa-cloud-sun");
+        localStorage.setItem("darkmode", !localStorage.getItem("darkmode"));
+      }
+    </script>
+  </head>
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
-
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="title anchor">Roman Kasparian</span>
-								</a>
-
-							<!-- Nav -->
-								<nav aria-label="menu">
-									<ul>
-										<li><a href="#menu"></a></li>
-									</ul>
-								</nav>
-
-						</div>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu" aria-label="menu">
-						<h2>Roman Kasparian</h2>
-						<ul>
-							<li><a href="#home">Home</a></li>
-							<li><a href="#projects">Projects</a></li>
-							<li><a target="_blank" href="Roman Kasparian Resume.pdf" download>Resume</a></li>
-							<li><a href="#footer">Contact</a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<header id="home">
-								<div>
-									<h1>Hi, I'm Roman Kasparian.<br />
-										I'm a <u>software engineer</u> in Pittsburgh.<br />
-										Welcome to my site.
-									</h1>
-									<h1>
-										<em class="tech-skill devicon-git-plain colored"><p class="tooltip">Git</p></em>
-										<em class="tech-skill devicon-nodejs-plain colored"><p class="tooltip">Node.js</p></em>
-										<em class="tech-skill devicon-react-original colored"><p class="tooltip">React</p></em>
-										<em class="tech-skill devicon-angularjs-plain colored"><p class="tooltip">Angular</p></em>
-										<em class="tech-skill devicon-javascript-plain colored"><p class="tooltip">Javascript</p></em>
-										<em class="tech-skill devicon-typescript-plain colored"><p class="tooltip">Typescript</p></em>
-										<em class="tech-skill devicon-css3-plain colored"><p class="tooltip">CSS3</p></em>
-										<em class="tech-skill devicon-html5-plain colored"><p class="tooltip">HTML5</p></em>
-										<em class="tech-skill devicon-d3js-plain colored"><p class="tooltip">d3.js</p></em>
-										<em class="tech-skill devicon-java-plain colored"><p class="tooltip">Java</p></em>
-										<em class="tech-skill devicon-python-plain colored"><p class="tooltip">Python</p></em>
-									</h1>
-									You can reach me at <a href="tel:571-239-9541">+1 (571) 239-9541</a> or <a href="mailto: roman.kasparian@gmail.com">roman.kasparian@gmail.com</a>.
-									<br />Here is my <a target="_blank" href="Roman Kasparian Resume.pdf" download>resume</a>.
-								</div>
-								<div id="profile">
-									<div class="image-cropper">
-										<img src="images/me.jpg" alt="me"/>
-									</div>
-									<ul class="icons">
-										<li><a href="https://linkedin.com/in/roman-kasparian/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
-										<li><a href="https://github.com/romangvk" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>
-										<li><a href="mailto: roman.kasparian@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-									</ul>
-								</div>
-							</header>
-							<hr>
-							<a id="projects" href="#projects"><h2 class="anchor">Projects</h2></a>
-							<section class="tiles">
-								<article class="style1">
-									<span class="image">
-										<img src="images/graph-explorer.png" alt="" />
-									</span>
-									<a target="_blank" href="https://romankasparian.dev/graph-explorer">
-										<h2>Graph Explorer</h2>
-										<div class="content">
-											<p>Interactive graph visualizer built with React and d3.js</p>
-										</div>
-									</a>
-								</article>
-								<article class="style2">
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<a href="https://github.com/romangvk">
-										<h2>In the works ...</h2>
-										<div class="content">
-											<p>This is where I'll post any projects I'm currently working on.</p>
-										</div>
-									</a>
-								</article>
-							</section>
-						</div>
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<a id="contact" href="#contact"><h2 class="anchor">Get in touch</h2></a>
-								<form method="post" action="https://formspree.io/f/mpzogezl">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="_replyto" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
-							<section>
-								<ul class="icons">
-									<li><a href="https://www.linkedin.com/in/roman-kasparian/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/romangvk" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>
-									<li><a href="mailto: roman.kasparian@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>Last updated March 2021 &copy; Roman Kasparian</li>
-							</ul>
-						</div>
-					</footer>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-	</body>
+  <body onload="setTheme()">
+    <button type="button" class="theme-toggle" onclick="toggleColors()">
+      <em id="theme" class="fas fa-fw fa-cloud-moon"></em>
+    </button>
+    <div id="content">
+      <header id="header">
+        <div class="inner">
+          <h3><a class="anchor" href="index.html">Roman Kasparian</a></h3>
+        </div>
+      </header>
+      <div id="main">
+        <div class="inner">
+          <div class="full row">
+            <h1>
+              Hi, I'm Roman Kasparian.<br />
+              I like to write code.<br />
+              Welcome to my website.
+            </h1>
+          </div>
+          <div class="full row">
+            <p>
+              You can reach me at
+              <a href="tel:+15712399541">+1 (571) 239-9541</a> or
+              <a href="mailto:roman.kasparian@gmail.com"
+                >roman.kasparian@gmail.com</a
+              >. Here is my <a href="assets/resources/Roman Kasparian Resume.pdf" target="_blank">resume.</a>
+            </p>
+            <div>
+              <!-- <a
+                class="icon"
+                href="https://gitlab.com/roman.kasparian"
+                target="_blank"
+                ><em class="fab fa-gitlab fa-fw"></em
+              ></a> -->
+              <a class="icon" href="https://github.com/romangvk" target="_blank"
+                ><em class="fab fa-github fa-fw"></em
+              ></a>
+              <a
+                class="icon"
+                href="https://www.linkedin.com/in/roman-kasparian/"
+                target="_blank"
+                ><em class="fab fa-linkedin fa-fw"></em
+              ></a>
+              <!-- <a
+                class="icon"
+                href="https://angel.co/u/roman-kasparian"
+                target="_blank"
+                ><em class="fab fa-angellist fa-fw"></em
+              ></a> -->
+              <a class="icon" href="mailto:roman.kasparian@gmail.com"
+                ><em class="fas fa-envelope fa-fw"></em
+              ></a>
+            </div>
+          </div>
+          <hr />
+          <h3><a id="projects" class="anchor" href="#projects">Projects</a></h3>
+          <div class="gallery">
+            <!-- <div>
+              <h3 class="title">Tremelo</h3>
+              <p class="desc">
+                A card-based list-making app for managing Agile teams made with
+                Angular and PostgreSQL.
+              </p>
+              <h4 class="links"><a>Live</a> ~ <a>Repo</a></h4>
+            </div>
+            <div>
+              <h3 class="title">WeBrowse</h3>
+              <p class="desc">
+                A video meeting app with a shared web browser made with
+                Socket.io, WebRTC, and Redis.
+              </p>
+              <h4 class="links"><a>Live</a> ~ <a>Repo</a></h4>
+            </div>
+            <div>
+              <h3 class="title">WeDraw</h3>
+              <p class="desc">
+                A collaborative whiteboard app made with React, Socket.io, and
+                MongoDB.
+              </p>
+              <h4 class="links"><a>Live</a> ~ <a>Repo</a></h4>
+            </div>
+            <div>
+              <h3 class="title">Play Investor</h3>
+              <p class="desc">
+                A stock market investment simulator using fake money and real
+                data made with D3.js and Vue 3.
+              </p>
+              <h4 class="links"><a>Live</a> ~ <a>Repo</a></h4>
+            </div>
+            <div>
+              <h3 class="title">SQL Maker</h3>
+              <p class="desc">
+                An object-oriented Python library to generate SQL query strings.
+              </p>
+              <h4 class="links"><a>Live</a> ~ <a>Repo</a></h4>
+            </div> -->
+            <div>
+              <h3 class="title">Graph Explorer</h3>
+              <p class="desc">An app to visualize graph data structures made using React and D3.</p>
+              <h4 class="links">
+                <a
+                  href="https://romankasparian.dev/graph-explorer"
+                  target="_blank"
+                  >Live</a
+                >
+                ~
+                <a
+                  href="https://github.com/romangvk/graph-explorer"
+                  target="_blank"
+                  >Repo</a
+                >
+              </h4>
+            </div>
+            <div>
+              <h3 class="title">React Calculator</h3>
+              <p class="desc">A simple calculator app made using React.</p>
+              <h4 class="links">
+                <a
+                  href="https://romankasparian.dev/react-calculator"
+                  target="_blank"
+                  >Live</a
+                >
+                ~
+                <a
+                  href="https://github.com/romangvk/react-calculator"
+                  target="_blank"
+                  >Repo</a
+                >
+              </h4>
+            </div>
+            <div>
+              <h3 class="title">Vue.js Calculator</h3>
+              <p class="desc">A simple calculator app made using Vue.</p>
+              <h4 class="links">
+                <a
+                  href="https://romankasparian.dev/vue-calculator"
+                  target="_blank"
+                  >Live</a
+                >
+                ~
+                <a
+                  href="https://github.com/romangvk/vue-calculator"
+                  target="_blank"
+                  >Repo</a
+                >
+              </h4>
+            </div>
+            <div>
+              <h3 class="title">This Website</h3>
+              <p class="desc">The source code for the website you are currently on.</p>
+              <h4 class="links">
+                <a
+                  href="https://github.com/romangvk/romangvk.github.io"
+                  target="_blank"
+                  >Repo</a
+                >
+              </h4>
+            </div>
+          </div>
+          <hr />
+          <h3><a id="skills" class="anchor" href="#skills">Skills</a></h3>
+          <div class="skills">
+            <i class="skill devicon-java-plain-wordmark colored"><p class="tooltip">Java</p></i>
+            <i class="skill devicon-python-plain-wordmark colored"><p class="tooltip">Python</p></i>
+            <i class="skill devicon-html5-plain-wordmark colored"><p class="tooltip">HTML5</p></i>
+            <i class="skill devicon-sass-plain colored"><p class="tooltip">Sass</p></i>
+            <i class="skill devicon-css3-plain-wordmark colored"><p class="tooltip">CSS3</p></i>
+            <i class="skill devicon-git-plain-wordmark colored"><p class="tooltip">Git</p></i>
+            <i class="skill devicon-nodejs-plain-wordmark colored"><p class="tooltip">Node.js</p></i>
+            <i class="skill devicon-javascript-plain colored"><p class="tooltip">Javascript</p></i>
+            <i class="skill devicon-react-plain-wordmark colored"><p class="tooltip">React</p></i>
+            <i class="skill devicon-vuejs-plain-wordmark colored"><p class="tooltip">Vue.js</p></i>
+            <i class="skill devicon-typescript-plain colored"><p class="tooltip">Typescript</p></i>
+            <i class="skill devicon-angularjs-plain-wordmark colored"><p class="tooltip">Angular</p></i>
+            <i class="skill devicon-babel-plain colored"><p class="tooltip">Babel</p></i>
+            <i class="skill devicon-d3js-plain colored"><p class="tooltip">D3.js</p></i>
+            <i class="skill devicon-spring-plain-wordmark colored"><p class="tooltip">Java Spring</p></i>
+            <i class="skill devicon-gradle-plain-wordmark"><p class="tooltip">Gradle</p></i>
+            <!-- <i class="skill devicon-tensorflow-original-wordmark colored"><p class="tooltip">TensorFlow</p></i> -->
+            <!-- <i class="skill devicon-socketio-original-wordmark"><p class="tooltip">Socket.io</p></i> -->
+            <!-- <i class="skill devicon-graphql-plain-wordmark colored"><p class="tooltip">GraphQL</p></i> -->
+            <!-- <i class="skill devicon-mongodb-plain-wordmark colored"><p class="tooltip">MongoDB</p></i> -->
+            <i class="skill devicon-redis-plain-wordmark colored"><p class="tooltip">Redis</p></i>
+            <!-- <i class="skill devicon-postgresql-plain-wordmark"><p class="tooltip">PostgreSQL</p></i> -->
+            <i class="skill devicon-mysql-plain-wordmark"><p class="tooltip">MySQL</p></i>
+          </div>
+          <hr />
+          <h3><a id="contact" class="anchor" href="#contact">Contact me</a></h3>
+          <form method="post" action="https://formspree.io/f/mpzogezl">
+            <div class="full row">
+              <div class="half">
+                <input type="text" name="name" id="name" placeholder="Name" />
+              </div>
+              <div class="half">
+                <input
+                  type="email"
+                  name="_replyto"
+                  id="email"
+                  placeholder="Email"
+                />
+              </div>
+            </div>
+            <div class="full">
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Message"
+              ></textarea>
+            </div>
+            <button type="submit" class="slide right">Send</button>
+          </form>
+        </div>
+      </div>
+      <footer id="footer">
+        <div class="inner">
+          <p class="credit">Last updated 2021 © Roman Kasparian</p>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
