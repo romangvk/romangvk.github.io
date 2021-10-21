@@ -82,54 +82,6 @@ hr {
   gap: 3em;
 }
 
-.gallery-small {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.skill {
-  font-size: 5em;
-  margin: 0.5em;
-  position: relative;
-  transition: filter 0.2s ease;
-}
-.light-theme .skill {
-  filter: grayscale() brightness(30%);
-}
-.dark-theme .skill {
-  filter: grayscale() brightness(300%);
-}
-.skill:hover {
-  filter:none;
-  text-shadow: 0 0 .5em var(--shadow);
-}
-
-/* Tooltip text */
-.skill > .tooltip {
-  visibility: hidden;
-  text-align: center;
-  font-size: 0.3em;
-  font-weight: 600;
-  color: inherit;
-
-  /* Position the tooltip text */
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  top: 75%;
-  left: 0;
-
-  transition: opacity 0.5s ease;
-  opacity: 0;
-}
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.skill:hover > .tooltip {
-  visibility: visible;
-  opacity: 1;
-}
-
 .gallery > div {
   height: 17em;
 
